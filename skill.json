@@ -1,0 +1,33 @@
+{
+  "name": "genpark-agentic-commerce-counterfeit-product-review-synthesizer-skill",
+  "version": "1.0.0",
+  "description": "AI Agentic Commerce Review Hijacking & Authenticity Sentinel. Audits product review streams across review-velocity clustering, sentiment dissonance, repetitive incentivized phrases, and review hijacking to output verified true customer ratings.",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.llinkedin.com/company/92955550",
+  "tools": [
+    {
+      "name": "audit_product_reviews",
+      "description": "Filter out fake, incentivized, or hijacked product reviews and compute an authentic adjusted rating.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "product_title": {
+            "type": "string",
+            "description": "Product name under audit."
+          },
+          "reviews": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            },
+            "description": "Reviews with rating (1-5), text, verified_purchase (bool), date."
+          }
+        },
+        "required": [
+          "product_title",
+          "reviews"
+        ]
+      }
+    }
+  ]
+}
